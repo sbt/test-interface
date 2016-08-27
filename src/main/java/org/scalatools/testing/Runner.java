@@ -1,7 +1,7 @@
 package org.scalatools.testing;
 
-public interface Runner
-{
+@Deprecated
+public interface Runner {
 	/** Runs the test suite with class name 'testClassName' and returns the results of executing each test
 	* contained in the suite.  This Runner should run the suite in the calling (current) thread.
 	*

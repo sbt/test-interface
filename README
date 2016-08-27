@@ -1,8 +1,0 @@
-To build, run 'sbt package'
-
-For test framework authors, the interfaces to implement are:
- * Framework
- * Runner2
- * Fingerprint (one of SubclassFingerprint or AnnotatedFingerprint)
-
-For test framework clients, Logger and EventHandler must be implemented.
