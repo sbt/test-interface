@@ -1,8 +1,8 @@
 package org.scalatools.testing;
 
 /** New Runner that can handle more types of Fingerprints.*/
-public abstract class Runner2 implements Runner
-{
+@Deprecated
+public abstract class Runner2 implements Runner {
 	/** Runs the test suite with class name 'testClassName' and returns the results of executing each test
 	* contained in the suite.  This Runner should run the suite in the calling (current) thread.
 	*
