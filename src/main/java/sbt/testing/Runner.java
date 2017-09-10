@@ -82,7 +82,7 @@ public interface Runner {
    * so on) to the client.
    * </p>
    *
-   * @return a possibly multi-line summary string, or the enpty string if no summary is provided
+   * @return a possibly multi-line summary string, or the empty string if no summary is provided
    */
   public String done();
 
@@ -94,7 +94,7 @@ public interface Runner {
   public String[] remoteArgs();
 
   /**
-   * Returns thge arguments that were used to create this <code>Runner</code>.
+   * Returns the arguments that were used to create this <code>Runner</code>.
    *
    * @return an array of argument that is used to create this Runner.
    */
