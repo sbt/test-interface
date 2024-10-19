@@ -6,7 +6,7 @@ version := "1.0"
 
 description := "Uniform test interface to Scala/Java test frameworks (specs, ScalaCheck, ScalaTest, JUnit and other)"
 
-scalaVersion := "2.10.2"
+scalaVersion := "2.13.15"
 
 // disable using the Scala version in output paths and artifacts
 crossPaths := false
@@ -20,7 +20,8 @@ publishTo := {
   else                             Some("publish-releases" at nexus + "service/local/staging/deploy/maven2")
 }
 
-libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0" % Test
+libraryDependencies += "org.scalatest" %% "scalatest-refspec" % "3.2.19" % Test
+libraryDependencies += "org.scalatest" %% "scalatest-shouldmatchers" % "3.2.19" % Test
 
 publishMavenStyle := true
 
