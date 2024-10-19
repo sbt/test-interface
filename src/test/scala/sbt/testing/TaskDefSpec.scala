@@ -33,7 +33,7 @@ class TaskDefSpec extends UnitSpec {
       )
 
   object `a TaskDef` {
-    def `should give back what you put into it` {
+    def `should give back what you put into it`: Unit = {
         td1.fullyQualifiedName shouldBe fqn1
         td1.fingerprint shouldBe SuiteSubclassFingerprint
         td1.explicitlySpecified shouldBe false
@@ -44,7 +44,7 @@ class TaskDefSpec extends UnitSpec {
         td2.explicitlySpecified shouldBe true
         td2.selectors shouldBe Array(new TestSelector("it should do something"))
     }
-    def `should throw NPE from constructor if null passed` {
+    def `should throw NPE from constructor if null passed`: Unit = {
       val fullyQualifiedName: String = "com.myproject.SomeSpec"
       val fingerprint: Fingerprint = SuiteSubclassFingerprint
       val selectors: Array[Selector] = Array(new SuiteSelector)
@@ -61,7 +61,7 @@ class TaskDefSpec extends UnitSpec {
         }
       }
     }
-    def `should have a properly behaving equals method` {
+    def `should have a properly behaving equals method`: Unit = {
       td1 shouldEqual td1
       td1 shouldEqual (
         new TaskDef(
@@ -75,7 +75,7 @@ class TaskDefSpec extends UnitSpec {
       td1 should not equal "howdy"
       td1 should not equal td2
     }
-    def `should have a properly behaving hashCode method` {
+    def `should have a properly behaving hashCode method`: Unit = {
       td1.hashCode shouldEqual td1.hashCode
       td1.hashCode shouldEqual (
         new TaskDef(
@@ -96,7 +96,7 @@ class TaskDefSpec extends UnitSpec {
         ).hashCode
       )
     }
-    def `should have a pretty toString` {
+    def `should have a pretty toString`: Unit = {
       td1.toString should startWith ("TaskDef(com.myproject.SomeSpec, ")
       td1.toString should endWith (", false, [SuiteSelector])")
       td2.toString should startWith ("TaskDef(com.myproject.SomeOtherSpec, ")

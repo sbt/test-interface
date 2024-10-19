@@ -9,7 +9,7 @@ class NestedTestSelectorSpec extends UnitSpec {
     val blueBirdNestedTestSelector = new NestedTestSelector("blue", "bird")
     val redFishNestedTestSelector = new NestedTestSelector("red", "fish")
     val blueFishNestedTestSelector = new NestedTestSelector("blue", "fish")
-    def `should give back what you put into it` {
+    def `should give back what you put into it`: Unit = {
       redBirdNestedTestSelector.suiteId shouldBe "red"
       redBirdNestedTestSelector.testName shouldBe "bird"
       blueBirdNestedTestSelector.suiteId shouldBe "blue"
@@ -19,7 +19,7 @@ class NestedTestSelectorSpec extends UnitSpec {
       blueFishNestedTestSelector.suiteId shouldBe "blue"
       blueFishNestedTestSelector.testName shouldBe "fish"
     }
-    def `should have a properly behaving equals method` {
+    def `should have a properly behaving equals method`: Unit = {
       redBirdNestedTestSelector shouldEqual redBirdNestedTestSelector
       redBirdNestedTestSelector shouldEqual new NestedTestSelector("red", "bird")
       redBirdNestedTestSelector shouldEqual new NestedTestSelector(red(), "bird")
@@ -30,7 +30,7 @@ class NestedTestSelectorSpec extends UnitSpec {
       redBirdNestedTestSelector should not equal "howdy"
       redBirdNestedTestSelector should not equal new SuiteSelector
     }
-    def `should have a properly behaving hashCode method` {
+    def `should have a properly behaving hashCode method`: Unit = {
       redBirdNestedTestSelector.hashCode shouldEqual redBirdNestedTestSelector.hashCode
       redBirdNestedTestSelector.hashCode shouldEqual (new NestedTestSelector("red", "bird")).hashCode
       redBirdNestedTestSelector.hashCode should not equal blueBirdNestedTestSelector.hashCode
@@ -38,7 +38,7 @@ class NestedTestSelectorSpec extends UnitSpec {
       blueBirdNestedTestSelector.hashCode shouldEqual blueBirdNestedTestSelector.hashCode
       blueBirdNestedTestSelector.hashCode shouldEqual (new NestedTestSelector("blue", "bird")).hashCode
     }
-    def `should throw NPE from constructor if null passed` {
+    def `should throw NPE from constructor if null passed`: Unit = {
       a [NullPointerException] should be thrownBy {
         new NestedTestSelector(null, "bird")
       }
@@ -46,7 +46,7 @@ class NestedTestSelectorSpec extends UnitSpec {
         new NestedTestSelector("red", null)
       }
     }
-    def `should have a pretty toString` {
+    def `should have a pretty toString`: Unit = {
       redBirdNestedTestSelector.toString shouldEqual "NestedTestSelector(red, bird)"
       blueBirdNestedTestSelector.toString shouldEqual "NestedTestSelector(blue, bird)"
     }
