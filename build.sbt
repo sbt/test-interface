@@ -64,3 +64,5 @@ pomExtra := (
     </developer>
   </developers>
 )
+
+Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.Raw
